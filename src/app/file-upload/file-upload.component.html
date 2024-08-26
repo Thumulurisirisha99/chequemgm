@@ -1,0 +1,204 @@
+<section class="back_col_page_color">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top nav_set_up">
+    </nav>
+    <div class="heading_nav_below pl-10">
+        <h3>Upload File</h3>
+    </div>
+    <form [formGroup]="chequeForm" (ngSubmit)="downloadEmployeeDetails()">
+        <div class="row dropdown_list">
+            <div class="col-md-5">
+                <div class="dropdown_business">
+                    <label for="business">Business Unit</label>
+                    <select formControlName="businessUnit" id="business">
+                        <option value="">Select Business Unit</option>
+                        <option *ngFor="let unit of businessUnits" [value]="unit">{{ unit }}</option>
+                    </select>
+                    <button type="submit" class="btn" id="downloadBtn">Download Employee Details</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="pay_period">
+                    <label for="pay_period">Pay Period</label>
+                    <select formControlName="payPeriodDate" id="pay_period">
+                        <option value="">Select Pay Period</option>
+                        <option *ngFor="let pay of payPerioddates" [value]="pay">{{ pay }}</option>
+                    </select>
+                    <label class="btn">
+                        <span class="filename">
+                            Attach / Upload <span class="float-right"><i class="bi bi-upload fa-md mr-2"></i></span>
+                        </span>
+                        <input type="file" (change)="onFileChange($event)" name="choose_file" accept=".pdf">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="loader" *ngIf="isLoading">
+        <div class="spinner"></div>
+        <p>Please wait, this may take a few minutes...</p>
+    </div>
+    <section class="table_sec cusscroll">
+        <div class="container-fluid ">
+            <div class="data_revised_cheques">
+                <div class="cheque_date">
+                    <h4>Revised Cheques</h4>
+                    <div class="date-picker">
+                        <form action="/search" method="get">
+                            <form action="/search" method="get" (ngSubmit)="onSearchSubmit(searchQuery)">
+                                <input [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search..."
+                                    id="searchright" type="search" />
+                            </form>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead class="table_head">
+                            <tr>
+                                <th>Sr.No.</th>
+                                <th>PayPeriodDate</th>
+                                <th>Employee Code</th>
+                                <th>Employee Name</th>
+                                <!-- <th>Doj</th>
+                                <th>Div</th>
+                                <th>Dept</th>
+                                <th>Desig</th>
+                                <th>State</th>
+                                <th>Region</th>
+                                <th>Hq</th>
+                                <th>Paid days</th> -->
+                                <th>Bank</th>
+                                <th>Ifsc</th>
+                                <th>A/C No</th>
+                                <!-- <th>Expenses</th>
+                                <th>Incentive</th>  -->
+                                <th>Net Salary</th>
+                                <th>Bank Credit(RS)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table_row_top_bottom" *ngFor="let datas of data; let i = index;">
+                                <td>{{i+1}}</td>
+                                <td>{{payPeriodDate}}</td>
+                                <td>{{datas.empCode}}</td>
+                                <td>{{datas.empName}}</td>
+                                <!-- <td>{{payPeriodDate}}</td>
+                                <td>{{datas.doj}}</td>
+                                <td>{{datas.divData}}</td>
+                                <td>{{datas.dept}}</td>
+                                <td>{{datas.desig}}</td>
+                                <td>{{datas.state}}</td>
+                                <td>{{datas.region}}</td>
+                                <td>{{datas.hq}}</td>
+                                <td>{{datas.paidDays}}</td> -->
+                                <td>{{datas.bank}}</td>
+                                <td>{{datas.ifsc}}</td>
+                                <td>{{datas.accountNumber}}</td>
+                                <!-- <td>{{datas.expenses}}</td>
+                                <td>{{datas.incentive}}</td>  -->
+                                <td>{{datas.netSalary}}</td>
+                                <td>{{datas.bankCredit}}</td>
+                                <!-- <td *ngIf="datas.bank === 'NA' || datas.bank === null">
+                                   
+                                    <button class="transfer-button" data-bs-toggle="modal" data-bs-target="#uploadModal"
+                                        type="button"  (click)="openUploadModal(payPeriodDate, datas.empCode)">Transfer</button>
+                                </td> -->
+                                <ng-container [ngSwitch]="{statusCode: datas.statusCode, bank: datas.bank}">
+                                    <td
+                                        *ngIf="(datas.bank === 'NA' || datas.bank === null) && datas.statusCode == 1001">
+                                        <button class="transfer-button" data-bs-toggle="modal"
+                                            data-bs-target="#uploadModal" type="button"
+                                            (click)="openUploadModal(payPeriodDate, datas.empCode)">Transfer</button>
+                                    </td>
+                                    <td
+                                        *ngIf="(datas.bank === 'NA' || datas.bank === null) && datas.statusCode == 1005">
+                                        <button class="transfer-completed">
+                                            Completed
+                                        </button>
+                                    </td>
+                                    <td
+                                        *ngIf="(datas.bank !== 'NA' && datas.bank !== null) && datas.statusCode == 1001">
+                                        <button class="transfer" data-bs-toggle="modal"
+                                            type="button">Transfered</button>
+                                    </td>
+                                    <td
+                                        *ngIf="(datas.bank !== 'NA' && datas.bank !== null) && datas.statusCode == 1005">
+                                        <button class="transfer" data-bs-toggle="modal"
+                                            type="button">Transfered</button>
+                                    </td>
+                                </ng-container>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pseduo-track"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<div class="pagination-container">
+    <div class="pagination-controls">
+        <span>Rows per page:</span>
+        <select (change)="onPageSizeChange($event)">
+            <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+        </select>
+        <span>{{ startRow }}–{{ endRow }} of {{ totalItems }}</span>
+        <button (click)="previousPage()" [disabled]="page === 0">Previous</button>
+        <button (click)="nextPage()" [disabled]="page === lastPage()">Next</button>
+    </div>
+</div>
+<section>
+    <div class="modal fade" id="uploadModal" aria-hidden="true" #uploadModal tabindex="-1"
+        aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="uploadModalLabel">Upload Cheque Details
+                    </h5> -->
+                    <h5 class="modal-title" id="uploadModalLabel">{{ modalTitle }}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="upload" (ngSubmit)="uploadCheque()">
+                        <div class="date_upload">
+                            <div class="form-group mb-3">
+                                <label for="issued-date">Issued Date<span class="Important">*</span></label>
+                                <input type="date" class="form-control" id="issued-date" formControlName="issueDate">
+                            </div>
+                            <div class="form-group mb-3">
+                                <p>Upload File <span class="Important">*</span></p>
+                                <label for="file-upload" class="custom-file-upload">
+                                    Upload <img src="./assets/img/file-earmark-text.svg" alt="">
+                                </label>
+                                <input type="file" id="file-upload" (change)="onFileChange($event)">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="issued-amount">Issued Amount<span class="Important">*</span></label>
+                            <input type="number" class="form-control" id="issued-amount" formControlName="issuedAmount">
+                            <!-- <input type="number" class="form-control" id="issued-amount" formControlName="issuedAmount"> -->
+
+                        </div>
+                        <div class="serial_bank">
+                            <div class="form-group mb-3">
+                                <label for="cheque-serial-number">Cheque Serial
+                                    Number<span class="Important">*</span></label>
+                                <input type="text" class="form-control" id="cheque-serial-number"
+                                    formControlName="chequeSerialNumber">
+                            </div>
+                        </div>
+                        <div class="save_submit">
+                            <button type="submit" class="btn btn-primary">Save &
+                                Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

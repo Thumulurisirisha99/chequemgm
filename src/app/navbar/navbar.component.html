@@ -1,0 +1,131 @@
+<section class="back_col_page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top nav_set_up">
+        <a class="navbar-brand logo_img_page" href="#"><img src="/../assets/assets/img/logo_img.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto dash_cheque_nav">
+                <li class="nav-item" [class.active]="isActive('/dashboard')">
+                    <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                </li>
+                <!-- <li class="nav-item" [class.active]="isActive('/revisedCheque')">
+                    <a class="nav-link" routerLink="/revisedCheque">Revised Cheques</a>
+                </li> -->
+                <!-- <li class="nav-item" [class.active]="isActive('/fileStatus')">
+                    <a class="nav-link" routerLink="/fileStatus">File Status</a>
+                </li> -->
+                <li class="nav-item" [class.active]="isActive('/fileUpload')" *ngIf="isAdmin">
+                    <a class="nav-link" routerLink="/fileUpload">Upload File</a>
+                </li>
+                <!-- <li class="nav-item" [class.active]="isActive('/registation')" *ngIf="isAdmin">
+                    <a class="nav-link" routerLink="/registation">Register User</a>
+                </li> -->
+            </ul>
+            <!-- <div class="icons_profile_nav ml-auto">
+                <div class="bell_ring"><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></div>
+                <div class="settings_nav"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></div>
+                <div class="profile_pic_nav"><a href="#"><img src="/../assets/assets/img/profile_img.png" alt=""></a>
+                </div>
+            </div> -->
+            <div class="icons_profile_nav ml-auto">
+                <div class="settings_nav"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></div>
+                <div class="profile_pic_nav">
+                    <div class="dropdown show custom_dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <!-- <img src="/../assets/assets/img/profile_img.png"
+                                alt="Profile Image"> -->
+                            <img [src]="profileImage" alt="Profile Image">
+                        </a>
+                        <div class="dropdown-menu custom_dropdown" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#" data-toggle="modal"
+                                data-target="#profileModal">Profile</a>
+                            <!-- <a class="dropdown-item" href="change_password.html">Change Password</a> -->
+                            <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changePassword"
+                                type="button">Change
+                                Password</a>
+                            <a class="dropdown-item" href="index.html" (click)="logout()">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="table_sec cusscroll">
+        <div class="container-fluid ">
+            <router-outlet></router-outlet>
+        </div>
+    </section>
+</section>
+<section class="pop_up_section_profile">
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body employe_details">
+                    <div class="profile-card">
+                        <div class="image_upload_pop">
+                            <!-- <img [src]="profileImage" alt="Profile Image" class="profile-img" id="profile-img-preview"> -->
+                            <img [src]="profileImage" alt="Profile Image" class="profile-img" />
+                            <div class="cam_trash">
+                                <label for="upload-input" class="upload-label"><i class="fa fa-camera"
+                                        aria-hidden="true"></i></label>
+                                <input type="file" id="upload-input" accept="image/*" (change)="onFileChange($event)">
+                                <button *ngIf="selectedFile" (click)="submitImage()">Submit</button>
+                                <span class="delete"><i class="fa fa-trash" aria-hidden="true"
+                                        (click)="deleteImage()"></i></span>
+                            </div>
+                        </div>
+                        <h2>{{ profileName }}</h2>
+                        <p>{{ profileRole }}</p>
+                        <p>{{ profileDepartment }}</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="passwordChangeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changePassword">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="passwordForm" (ngSubmit)="changePassword()">
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password</label>
+                        <input type="text" id="newPassword" class="form-control" formControlName="newPassword">
+                        <div *ngIf="passwordForm.get('newPassword')?.invalid && passwordForm.get('newPassword')?.touched"
+                            class="text-danger">
+                            Password must be 6-15 characters long, include at least one letter, one number, and one
+                            special character (!,#,$,&).
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="text" id="confirmPassword" class="form-control" formControlName="confirmPassword">
+                        <div *ngIf="passwordForm.hasError('mismatch') && passwordForm.get('confirmPassword')?.touched"
+                            class="text-danger">
+                            Passwords do not match.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="passwordForm.invalid">Change
+                        Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

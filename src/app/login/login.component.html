@@ -1,0 +1,69 @@
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 p-0">
+                <div class="right_side">
+                    <div class="card">
+                        <h1><span class="cheque_col">Streamlined <br>digital interface <br>for efficient <br></span>
+                            cheque <br> management.</h1>
+                        <p>Track, manage, secure; streamline cheque transactions effortlessly with our intuitive
+                            dashboard solution.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div></div>
+            </div>
+            <div class="col-md-5">
+                <div class="comny_logo">
+                    <a href="index.html"> <img src="../../assets/assets/img/logo_img.png" alt=""></a>
+                </div>
+                <div class="wel_msg">
+                    <div class="wel_gif">
+                        <h3>Hey, Welcome Back </h3>
+                        <img class="gif_img_bye" src="../../assets/assets/img/bye_gif.gif" alt="">
+                    </div>
+                    <div>
+                        <p>Enter the information you have entered while registering.</p>
+                        <br>
+                        <h6 *ngIf="errorMessage" class="error-message">
+                            {{ errorMessage }}
+                        </h6>
+                    </div>
+                </div>
+                <div class="login_form">
+                    <form id="login-form" action="#" class="form_login" [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <label for="employe id">Email Address / Employee ID</label>
+                            <input type="text" name="email" id="address-id" class="form-control"
+                                formControlName="username">
+                            <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid"
+                                class="error-message">
+                                Username is required
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <div class="password_input">
+                                <input [type]="isPasswordVisible ? 'text' : 'password'" name="password"
+                                    id="password-field" class="form-control" formControlName="password">
+                                <span (click)="togglePasswordVisibility()" toggle="#password-field"
+                                    class="fa fa-fw fa-eye field-icon toggle-password eye_view"
+                                    [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></span>
+                                <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+                                    class="error-message">
+                                    <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required
+                                    </div>
+                                    <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at
+                                        least 6 characters</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a routerLink="/reset" class="reset_password">Reset Password ?</a>
+                        <input type="submit" name="Login" id="login" value="Log In">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,431 @@
+<section class="back_col_page">
+    <section class="nav_bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top nav_set_up">
+        </nav>
+    </section>
+    <div class="heading_nav_below pl-10">
+        <h3>Hello, {{name}}</h3>
+    </div>
+    <section class="graph_sec">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 p-1">
+                    <div class="dashboard">
+                        <div class="card transactions">
+                            <div class="total_drop_down">
+                                <h3>Total Transactions</h3>
+                                <div class="dropdown">
+                                    <select class="week_drops ">
+                                        <option>Week</option>
+                                        <!-- Add other options here if needed -->
+                                    </select>
+                                    <select class="week_dropss ">
+                                        <option>This Week</option>
+                                        <!-- Add other options here if needed -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="tranc_graph">
+                                <div class="week_drop_down">
+                                    <div class="transaction_details">
+                                        <p class="week_transaction">This Week Transactions</p>
+                                        <h3>₹22,3405.00</h3>
+                                        <p class="increase_per">↑ ₹15,4355.00</p>
+                                    </div>
+                                    <div class="transaction_cleared">
+                                        <p>12 Cleared</p>
+                                        <h4>₹10,4095.00</h4>
+                                    </div>
+                                    <div class="transaction_rejected">
+                                        <p>03 Rejected</p>
+                                        <h4>₹15,000.00</h4>
+                                    </div>
+                                </div>
+
+                                <div class="chart">
+                                    <img src="../assets/assets/img/line_chart_graph.png" alt="" class="graph_charts">
+                                    <div class="week_days">
+                                        <p>Mon</p>
+                                        <p>Tue</p>
+                                        <p>Wed</p>
+                                        <p>Thu</p>
+                                        <p>Fri</p>
+                                        <p>Sat</p>
+                                        <p>Sun</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card cheques_dark">
+                        <div class="revised_week">
+                            <h2>Revised <br> Cheques</h2>
+                            <div class="dropdown">
+                                <select class="week_drop">
+                                    <option>Week</option>
+                                    <!-- Add other options here if needed -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="pie_chart_two">
+                            <img src="../assets/assets/img/pie_chart.png" alt="">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 p-1">
+                    <div class="card recent_logins">
+                        <h4>Recent Login's <span class="login_users">(04)</span></h4>
+                        <div class="profile_names">
+                            <img src="../assets/assets/img/profile_img.png" alt="">
+                            <div class="name_times">
+                                <h6>Goutham Reddy</h6>
+                                <p>01:24 pm</p>
+                            </div>
+                        </div>
+                        <div class="profile_names">
+                            <img src="../assets/assets/img/profile_img.png" alt="">
+                            <div class="name_times">
+                                <h6>Goutham Reddy</h6>
+                                <p>01:24 pm</p>
+                            </div>
+                        </div>
+                        <div class="profile_names">
+                            <img src="../assets/assets/img/profile_img.png" alt="">
+                            <div class="name_times">
+                                <h6>Goutham Reddy</h6>
+                                <p>01:24 pm</p>
+                            </div>
+                        </div>
+                        <div class="profile_names">
+                            <img src="../assets/assets/img/profile_img.png" alt="">
+                            <div class="name_times">
+                                <h6>Goutham Reddy</h6>
+                                <p>01:24 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="table_sec cusscroll">
+        <div class="container-fluid ">
+            <div class="data_revised_cheque">
+                <div class="cheque_date">
+                    <h4>Revised Cheques</h4>
+                    <div class="date-picker">
+                        <form action="/search" method="get">
+                            <input class="search expandright" id="searchright" type="search" name="q"
+                                placeholder="Search">
+                            <label class="button searchbutton" for="searchright"><span
+                                    class="mglass">&#9906;</span></label>
+                            <input type="date" value="2024,May 05">
+                        </form>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead class="table_head">
+                            <tr>
+                                <div class="table_head_inner"></div>
+                                <th>Sr.No.</th>
+                                <th>Employee Code</th>
+                                <th>Employee Name</th>
+                                <th>Cheque</th>
+                                <th>DOJ</th>
+                                <th>Div</th>
+                                <th>Dep</th>
+                                <th>Desi</th>
+                                <th>State</th>
+                                <th>Sr.No.</th>
+                                <th>Employee Code</th>
+                                <th>Employee Name</th>
+                                <th>Cheque</th>
+                                <th>DOJ</th>
+                                <th>Div</th>
+                                <th>Dep</th>
+                                <th>Desi</th>
+                                <th>State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                            <tr class="table_row_top_bottom">
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+                                <td>1</td>
+                                <td>112328</td>
+                                <td>Saurav Mohan Kale</td>
+                                <td><a href="#" data-toggle="modal" data-target="#uploadChequeModal">Upload
+                                    </a>
+                                </td>
+                                <td>09-01-2024</td>
+                                <td>FRENZA</td>
+                                <td>Marketing</td>
+                                <td>Probationary Territory Manager</td>
+                                <td>Maharashtra</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- pop up code for cheque upload -->
+    <section class="pop_up_sec_cheque_upload">
+        <div class="modal fade" id="uploadChequeModal" tabindex="-1" aria-labelledby="uploadChequeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title upload_cheque_text" id="uploadChequeModalLabel">Upload Cheque</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="cheque_form_upload" id="dashboard_form">
+                            <div class="date_upload">
+                                <div class="form-group">
+                                    <label for="issued-date">Issued Date</label>
+                                    <input type="date" class="issued_date" name="issued_date" value="">
+                                </div>
+                                <div class="form-group">
+                                    <p>Upload File</p>
+                                    <label for="file-upload" class="custom-file-upload upload_file_download">
+                                        Upload <img src="./assets/img/upload.svg" alt=""> </label><input type="file"
+                                        id="file-upload" name="file" onchange="showFileName()">
+                                    <p id="file-name" class="file-name"></p> <!-- Added to display file name -->
+                                </div>
+                            </div>
+                            <div class="serial_bank">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" name="cheque-serial_number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="check-number">Check Number</label>
+                                    <input type="number" name="bank_name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" name="amount">
+                                </div>
+                            </div>
+                            <div class="name_amount">
+                                <div class="form-group">
+                                    <label for="comments">Comment / Remark</label>
+                                    <input type="text" name="comment_remark">
+                                </div>
+                            </div>
+                            <div class="save_submit">
+                                <input type="submit" value="Submit" class="submit_save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pop code for the profile details -->
+    <section class="pop_up_section_profile">
+        <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body employe_details">
+                        <div class="profile-card">
+                            <div class="image_upload_pop">
+                                <img src="./assets/img/blank-profile-picture.jpg" alt="Profile Image"
+                                    class="profile-img" id="profile-img-preview">
+                                <div class="cam_trash">
+                                    <label for="upload-input" class="upload-label"><i class="fa fa-camera"
+                                            aria-hidden="true"></i></label>
+                                    <input type="file" id="upload-input" accept="image/*">
+                                    <span class="delete"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <h2>Goutham Reddy Parnapalli</h2>
+                            <p>Junior Web Designer</p>
+                            <p>Probationary</p>
+                            <p>Information Technology</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- Add additional buttons if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

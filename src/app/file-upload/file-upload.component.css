@@ -1,0 +1,1647 @@
+.upload_file_form {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.table_sec {
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+.upload_file_form,
+.table_sec {
+    padding: 0;
+}
+
+.back_col_page_color {
+    padding: 0;
+    margin: 0;
+}
+
+.table-container {
+    margin-top: 5px;
+}
+
+.table_sec {
+    padding-top: 5px;
+}
+
+.pagination-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    width: 450px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.pagination-controls span,
+.pagination-controls select,
+.pagination-controls button {
+    margin: 0 2px;
+    white-space: nowrap;
+}
+
+.pagination-controls select {
+    padding: 2px 4px;
+    font-size: 14px;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader p {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.transfer-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.transfer-completed {
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.transfer {
+    background-color: yellow;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-form-container {
+    padding: 20px;
+}
+
+.upload-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between the input and button */
+}
+
+.upload-form input[type="file"] {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.upload-form button {
+    padding: 8px 16px;
+}
+
+body {
+    font-family: Urbanist !important;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+}
+
+.right_side {
+    /* background-image: url(../img/background_1.png); */
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.otp-input {
+    width: 12%;
+    height: 8vh;
+    border-radius: 12px;
+    border: 1px solid #dadada;
+}
+
+
+
+
+/* grap css bashboard */
+.total_drop_down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graph_charts {
+    width: 100% !important;
+    height: 45vh;
+}
+
+.dropdown {
+    display: flex;
+    gap: 8px;
+}
+
+.tranc_graph {
+    display: flex;
+    gap: 50px;
+}
+
+.dashboard {
+    background-color: #CBE1D5;
+    border-radius: 15px;
+}
+
+.week_days {
+    display: flex;
+    font-size: 0px;
+    gap: 26px;
+}
+
+.week_days p {
+    font-weight: 600;
+}
+
+.card {
+    background-color: #FFFFFF3B !important;
+    padding: 14px;
+    border-radius: 15px !important;
+    margin-top: 40px;
+    border: none !important;
+}
+
+.week_transaction {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    margin-top: 20px;
+}
+
+.increase_per {
+    font-size: 16px !important;
+    font-weight: 800 !important;
+}
+
+.transactions p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.transaction_cleared {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.week_drops {
+    background: transparent;
+    color: #000;
+    border-color: #000;
+    width: 100%;
+    height: 6vh;
+}
+
+.week_dropss {
+    background: transparent;
+    color: #000;
+    border-color: #000;
+    width: 140%;
+    height: 6vh;
+}
+
+.transaction_cleared h4 {
+    font-weight: 600;
+}
+
+.transaction_rejected {
+    background: rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    margin: 2px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction_rejected h4 {
+    font-weight: 600;
+}
+
+.revised_week {
+    display: flex;
+    justify-content: space-between;
+}
+
+.revised_week h2 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #ffff;
+}
+
+.pie_chart_two img {
+    width: 66%;
+    margin-top: 16px;
+}
+
+.card.cheques_dark {
+    background: rgba(32, 32, 32, 1) !important;
+}
+
+.cheques_dark p {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 14px;
+}
+
+.week_drop {
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    height: 6vh;
+}
+
+.card.recent_logins {
+    background: rgba(39, 174, 97, 1) !important;
+    color: white;
+    padding: 28px;
+    padding-bottom: 76px;
+}
+
+.login_users {
+    font-size: 12px;
+}
+
+.name_times h6 {
+    font-size: 14px;
+}
+
+.name_times p {
+    font-size: 12px;
+}
+
+.profile_names {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 2px;
+    margin-top: 10px;
+}
+
+.profile_names img {
+    width: 18%;
+}
+
+
+/* start */
+/* replace this code */
+.dropdown_business {
+    height: 60px;
+}
+
+.dropdown_list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #000 !important;
+    border: none;
+    color: #fff !important;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 14px 0px;
+    font-weight: 600 !important;
+}
+
+.dropdown_list label {
+    font-size: 16px !important;
+}
+
+/* end */
+
+
+
+
+
+
+
+
+
+.cheque_col {
+    color: white;
+}
+
+.comny_logo img {
+    width: 33%;
+    height: auto;
+    margin-top: 35px;
+}
+
+.wel_msg {
+    margin-top: 60px;
+    line-height: 0px;
+}
+
+.wel_msg h3 {
+    font-weight: 700;
+}
+
+.wel_msg p {
+    font-size: 14px;
+    color: #505050;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.wel_gif {
+    display: flex;
+}
+
+.gif_img_bye {
+    width: 32px;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 17px;
+}
+
+
+/* form css */
+
+label {
+    display: inline-block;
+    margin-bottom: 0px !important;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-control {
+    display: block;
+    width: 80% !important;
+    height: calc(1.5em + .75rem + 14px) !important;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 10px !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input#login {
+    width: 80%;
+    height: 45px;
+    background: linear-gradient(90.81deg, #137CFF 0%, #6DBCFF 65.05%, #137CFF 130.09%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 22px;
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+.password_input {
+    position: relative;
+
+    .eye_view {
+        position: absolute;
+        top: 18px;
+        right: 125px;
+    }
+}
+
+.login_form {
+    position: relative;
+    margin-top: 32px;
+}
+
+.form-group {
+    margin-bottom: 0.5rem !important;
+}
+
+input#reset {
+    background: none;
+    border: none;
+    font-weight: 700;
+    margin-left: 295px;
+    color: black;
+    font-size: 14px;
+    line-height: 0px;
+    margin-bottom: 12px;
+}
+
+
+
+
+.line_or {
+    display: flex;
+    width: 80%;
+}
+
+.line_or hr {
+    width: 165px;
+}
+
+.line_or p {
+    padding: 0px 20px;
+}
+
+
+.reg_above p {
+    font-size: 14px;
+}
+
+.reg_above {
+    width: 80%;
+}
+
+input#register {
+    width: 75%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #137CFF;
+    color: #137CFF;
+    border-radius: 8px;
+}
+
+
+/* page2 css style  */
+
+
+.req_otp {
+    background-color: unset !important;
+    border: none;
+    color: black !important;
+    font-weight: 700;
+    margin-left: 320px;
+    font-size: 14px !important;
+}
+
+.digit-group input {
+    width: 30px;
+    height: 50px;
+    border: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    color: white;
+    margin: 0 2px;
+}
+
+
+.prompt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.timer_otp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 79%;
+}
+
+.otp_box {
+    width: 13% !important;
+    height: 8vh;
+    border-radius: 6px !important;
+    border: 1px solid #B7B7B7 !important;
+}
+
+.otp_text {
+    margin-bottom: 0px !important;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.otp_req {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: 700;
+}
+
+.reset_page_back {
+    width: 6%;
+    display: flex;
+    margin-top: 8px;
+}
+
+
+/* page 3 create new password css */
+
+.eye_view1 {
+    position: absolute;
+    top: 40px;
+    width: 4%;
+    left: 390px;
+}
+
+
+/* page 5 css resived cheque page */
+
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    border-radius: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.header img {
+    height: 40px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+.container h1 {
+    color: #333;
+}
+
+.table_sec table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    overflow-x: auto;
+    border-radius: 20px;
+    display: block;
+    font-size: 15px;
+    max-height: 300px;
+}
+
+.table_sec tr {
+    text-wrap: nowrap;
+    border-bottom: 1px solid #f2f2f2;
+    display: table-row;
+}
+
+.table_sec tr:first-child {
+    margin-top: 10px;
+
+
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* th {
+    background-color: #f0f0f0;
+} */
+.table_head {
+    background-color: #f6f5fa !important;
+}
+
+/* .table_row_top_bottom{
+    border-bottom: 1px solid #EAEAEA;
+} */
+
+a {
+    color: #8a2be2;
+    text-decoration: none;
+}
+
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.date-picker {
+    float: right;
+    margin-top: -40px;
+}
+
+.date-picker input {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.profile-icon {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav_set_up {
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.logo_img_page img {
+    width: 65%;
+    margin-left: 10px;
+}
+
+.back_color_page {
+    background-color: #f6f5fa;
+    padding: 10px;
+    height: 100vh;
+}
+
+.back_col_page {
+    background-color: #f6f5fa;
+    padding: 10px;
+}
+
+.cheque_nav {
+    font-size: 12px;
+    font-weight: 700;
+    gap: 38px;
+    margin-right: 60px;
+}
+
+
+
+.mglass {
+    display: inline-block;
+    pointer-events: none;
+    /* -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg); */
+}
+
+.searchbutton {
+    position: absolute;
+    font-size: 25px;
+    width: 0px;
+    font-weight: 100;
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    right: 292px;
+    z-index: 10;
+}
+
+.search:focus+.searchbutton {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+}
+
+.search {
+    position: absolute;
+    background-color: white;
+    outline: none;
+    width: 30px;
+    height: 45px;
+    padding: 20px !important;
+    border-radius: 30px !important;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+}
+
+.search:focus {
+    width: 290px;
+    height: 45px;
+    padding: 0 16px 0 0;
+}
+
+.expandright {
+    left: auto;
+    right: 265px;
+}
+
+.expandright:focus {
+    padding: 0 0 0 16px;
+}
+
+
+
+
+
+
+
+/* nav bar css onclick */
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link.active {
+    background-color: black;
+    color: white !important;
+    border-radius: 8px;
+}
+
+.icons_profile_nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bell_ring {
+    border: 1px solid ddd;
+}
+
+i.fa.fa-bell-o {
+    border: 1px solid #ddd;
+    padding: 14px;
+    border-radius: 25px;
+    color: black;
+}
+
+i.fa.fa-bell-o:hover {
+    background-color: black;
+    color: white;
+}
+
+i.fa.fa-cog {
+    border: 1px solid #ddd;
+    padding: 14px;
+    border-radius: 25px;
+    color: black;
+}
+
+i.fa.fa-cog:hover {
+    background-color: black;
+    color: white;
+}
+
+.profile_pic_nav img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+.heading_nav_below {
+    margin-top: 120px;
+    padding-left: 10px;
+}
+
+.heading_nav_below h3 {
+    font-weight: 300;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.data_revised_cheque {
+    background-color: white;
+    padding-top: 22px;
+    margin-top: 120px;
+    padding-left: 30px;
+    border-radius: 15px;
+}
+
+
+.data_revised_cheques {
+    background-color: white;
+    margin-top: 120px;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+.cheque_date {
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.cheque_date h4 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.date-picker {
+    float: right;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search_find {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 12px;
+    color: #606060
+}
+
+.table_head {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.03) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+}
+
+
+
+/*--------- Custotm style ScrollBar Css ---------*/
+.cusscroll ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #efefef;
+}
+
+/* .cusscroll ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(217, 217, 217, 1); } */
+.cusscroll ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.cusscroll ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+
+
+
+
+.heading_nav_below_left {
+    margin-top: 120px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.heading_nav_below_left a {
+    color: black;
+}
+
+.heading_nav_below_left a:hover {
+    color: black;
+}
+
+.upload_left_arrow {
+    border: 1px solid #D3D3D3;
+    padding: 14px;
+    border-radius: 25px;
+}
+
+.revised_page_cheque {
+    line-height: 10px;
+}
+
+.revised_page_cheque p {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* form section css  */
+
+
+.cheque_form_upload {
+    border: none;
+    padding: 0px 40px 40px 40px;
+    border-radius: 30px;
+    background: white;
+}
+
+.cheque_form_upload input[type="text"],
+.cheque_form_upload input[type="number"],
+.cheque_form_upload input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+
+.upload_cheque_text {
+    font-size: 20px;
+}
+
+.modal-header {
+    padding: 28px 20px 0px 20px;
+}
+
+input#issued-date {
+    width: 90%;
+    font-weight: 600;
+    padding: 12px;
+}
+
+.cheque_form_upload input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.cheque_form_upload button {
+    padding: 12px 36px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    background: linear-gradient(90.37deg, #137CFF -49.17%, #6DBCFF 45.75%, #137CFF 140.66%);
+}
+
+.cheque_form_upload button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.date_upload {
+    display: flex;
+    gap: 399px;
+}
+
+.serial_bank {
+    display: flex;
+}
+
+.name_amount {
+    display: flex;
+}
+
+.name_time p {
+    font-size: 14px;
+}
+
+.recent_activities {
+    background-color: #202020;
+    padding: 30px;
+    color: white;
+    padding-bottom: 80px;
+    border-radius: 20px;
+}
+
+.profile_name {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 2px;
+    margin-top: 10px;
+}
+
+.profile_name img {
+    width: 22%;
+}
+
+
+/* pop up model css for form styles*/
+
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 14px 22px;
+    cursor: pointer;
+    background: #137CFF36;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* .upload_file_download{
+    width: 120%;
+} */
+.custom-file-upload i {
+    margin-right: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: #137CFF36;
+}
+
+input[type="file"
+
+] {
+    display: none;
+}
+
+.form-group p {
+    margin-bottom: 0px !important;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Container styles */
+.serial_bank,
+.name_amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+    /* Space between form groups */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+    /* Remove right margin for the last form group */
+}
+
+/* Input and label styles */
+/* label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+} */
+
+
+.modal-content {
+    border-radius: 20px !important;
+}
+
+.employe_name {
+    width: 100%;
+    height: 9vh;
+    box-sizing: border-box;
+    border: 1px solid #dadada !important;
+    border-radius: 12px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.save_submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit_save {
+    color: white;
+    background: linear-gradient(90.37deg, #137CFF -49.17%, #6DBCFF 45.75%, #137CFF 140.66%);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 40px;
+}
+
+
+/* first page css reset password */
+.reset_password {
+    background: none;
+    font-weight: 700;
+    margin-left: 310px;
+    color: black;
+    font-size: 14px;
+    margin-top: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reset_password:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.request_otp {
+    background: none;
+    font-weight: 700;
+    color: black;
+    font-size: 14px;
+    margin-left: 340px;
+    margin-top: 14px;
+    display: block;
+}
+
+.request_otp:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.completed {
+    color: #27AE61;
+}
+
+.in_prog {
+    color: #FFB800;
+}
+
+.server_error {
+    color: #FF0000;
+}
+
+td {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+td a {
+    color: #9747ff;
+}
+
+td a:hover {
+    color: #9747ff;
+    text-decoration: unset;
+}
+
+.form_upload {
+    background: white;
+    padding: 20px;
+    border-radius: 35px;
+}
+
+.pay_upload_submit {
+    display: flex;
+
+}
+
+label.upload_things_in_file {
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    height: 8.5vh;
+    border-radius: 6px;
+    background: #e2efff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.upload_file_form {
+    display: flex;
+}
+
+.back_col_page_color {
+    background-color: #f6f5fa;
+    padding: 10px;
+}
+
+.back_col_page_colors {
+    background-color: #f6f5fa;
+    padding: 10px;
+    height: 100vh;
+}
+
+
+/* register user page css */
+
+.register_upload_file {
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.fileds_user {
+    display: flex;
+}
+
+.create_confirm {
+    display: flex;
+}
+
+.eye_viewss {
+    position: absolute;
+    bottom: 125px;
+    left: 500px;
+}
+
+.eye_views {
+    position: absolute;
+    bottom: 125px;
+    right: 180px;
+}
+
+.upload_select {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d2d2d2 !important;
+    border-radius: 300px;
+    width: 80px;
+    padding: 6px;
+    height: 80px;
+    margin-top: 14px;
+}
+
+label.profile_photo {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pro_pho {
+    margin-bottom: 12px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+}
+
+input#employeeID {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input#employeeName {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input#employeeEmail {
+    border-radius: 10px;
+    border: 1px solid #dadada;
+    height: 10.3vh;
+}
+
+select {
+    word-wrap: normal;
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    padding: 8px;
+    border: 1px solid #dadada;
+    font-size: 14px !important;
+    font-weight: 500;
+    background: transparent;
+}
+
+input#createPassword {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+}
+
+input#confirmPassword {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+}
+
+.form-group.sub_buton {
+    text-align: center;
+}
+
+input.sub_buton {
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    background: linear-gradient(90.37deg, #137CFF -49.17%, #6DBCFF 45.75%, #137CFF 140.66%);
+}
+
+.employe_name {
+    width: 100%;
+    height: 10.5vh;
+    box-sizing: border-box;
+    border: 1px solid #dadada !important;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* error mgs login page css */
+label.text-red.text-capitalize.text-normal {
+    position: relative;
+    font-size: 12px;
+    color: red;
+}
+
+
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-white.fixed-top.nav_set_up.mve_top {
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+    margin-top: 0px;
+}
+
+
+
+
+.search_tbl {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.4s ease;
+}
+
+.search_tbl.expanded {
+    width: 500px;
+}
+
+#myInputTextField {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: width 0.4s ease;
+}
+
+.btn_tbl_search {
+    background-color: #007BFF;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.btn_tbl_search i {
+    color: white;
+    font-size: 16px;
+}
+
+.btn_tbl_search:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* upload page css */
+.resive_cheque_form_upload {
+    border: none;
+    padding: 60px 20px 20px 20px !important;
+    border-radius: 30px;
+    background: white;
+    margin-top: 30px;
+}
+
+.resive_cheque_form_upload input[type="text"],
+.resive_cheque_form_upload input[type="number"],
+.resive_cheque_form_upload input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resive_cheque_form_upload button {
+    padding: 10px 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    background: linear-gradient(90.37deg, #137CFF -49.17%, #6DBCFF 45.75%, #137CFF 140.66%);
+    margin-top: 21px;
+    height: 8vh;
+}
+
+.resive_cheque_form_upload button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* resived Cheque upload css */
+
+.cheque_form_uploads {
+    border: none;
+    padding: 25px;
+    border-radius: 30px;
+    background: white;
+}
+
+.cheque_form_uploads input[type="text"],
+.cheque_form_uploads input[type="number"],
+.cheque_form_uploads input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cheque_form_uploads input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.cheque_form_uploads button {
+    padding: 12px 36px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    background: linear-gradient(90.37deg, #137CFF -49.17%, #6DBCFF 45.75%, #137CFF 140.66%);
+}
+
+.cheque_form_uploads button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* file status page delete button style */
+.delete_icon a {
+    color: #000;
+}
+
+
+/* drop down for profile click menu */
+.custom_dropdown .dropdown-menu {
+    left: unset !important;
+    right: 0px !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+/* pop up for profile details */
+.employe_details {
+    text-align: center;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.image_upload_pop {
+    width: 80px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This will ensure the image covers the container without stretching */
+    border-radius: 50%;
+    /* This makes the image circular, remove if you want it square */
+}
+
+.cam_trash {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cam_trash .upload-label,
+.cam_trash .delete {
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.cam_trash .upload-label i,
+.cam_trash .delete i {
+    font-size: 24px;
+    color: #333;
+    /* Change this color according to your theme */
+}
+
+
+input#Change-Password {
+    width: 80%;
+    height: 45px;
+    background: linear-gradient(90.81deg, #137CFF 0%, #6DBCFF 65.05%, #137CFF 130.09%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 22px;
+    margin-top: 18px;
+    font-weight: 600;
+}
